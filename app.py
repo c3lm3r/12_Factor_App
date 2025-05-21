@@ -1,7 +1,7 @@
 from flask import Flask
 
 app = Flask(__name__)
-redisDB = Redis(host="redis-db", port=6380)
+redisDB = Redis(host=os.getenv('HOST'), port=os.getenv('PORT'))
 
 @app.route('/')
 def welcomeToKodeKloud();
